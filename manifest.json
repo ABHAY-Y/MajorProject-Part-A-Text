@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name":"Detect Domestic Violence in Text",
+    "description":"Detection of Domestic Violence in text",
+    "version":"1.0",
+    "permissions": [
+        "activeTab",
+        "contextMenus"],
+    "background":{
+        "service_worker":"dvdetection.js"
+    },
+    "content_scripts": [{
+      "matches": ["*://*/*"],
+      "js": ["displayachinfo.js"]
+    }]
+}
